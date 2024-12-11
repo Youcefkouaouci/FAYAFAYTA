@@ -5,18 +5,208 @@ body {
   background-color: black;
 
   header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(images/bg-featured-home.jpg);
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.7), rgba(0, 0, 0, 0.7)),
+      url(images/bg-featured-home.webp);
     background-size: cover;
-    padding-bottom: 250px;
+    background-position: center;
 
+    div {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0px 25px 70px 0px;
+
+      h1 {
+        font-size: large;
+        width: 300px;
+      }
+    }
     img {
       padding: 25px 0px 0px 25px;
     }
-    /* fixer le titre d'accroche de site */
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    #main {
+      div {
+        display: flex;
+        justify-content: space-around;
 
-    h1 {
-      align-content: end;
+        section {
+          display: flex;
+          flex-direction: column;
+          width: 55%;
+          margin-top: 25px;
+
+          h2 {
+            background-color: #102223;
+            padding: 5px 0px 5px 25px;
+          }
+
+          ul {
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            li {
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+              width: 45%;
+              margin-top: 25px;
+
+              img {
+                width: 60px;
+                height: 60px;
+                margin-right: 20px;
+              }
+
+              div {
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+
+                h3 {
+                  margin: 0;
+                  color: white;
+                }
+                a {
+                  color: #6df2fc;
+                }
+                span {
+                  margin: 10px 0px 0px 0px;
+                  color: #74a1a3;
+                }
+
+                p {
+                  color: #74a1a3;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      aside {
+        width: 30%;
+        margin-top: 25px;
+
+        h2 {
+          padding: 5px 0px 5px 25px;
+          background-color: #102223;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          list-style-type: none;
+          padding: 0;
+          font-size: smaller;
+
+          li {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+
+            img {
+              width: 108px;
+              height: 72px;
+              margin-right: 20px;
+            }
+
+            div {
+              flex-direction: column;
+
+              h3 {
+                margin: 0;
+                color: white;
+              }
+
+              a {
+                color: #6df2fc;
+              }
+
+              p {
+                color: #346264;
+              }
+            }
+          }
+        }
+      }
+
+      section {
+        ul {
+          display: flex;
+          justify-content: space-around;
+          padding: 0;
+
+          .gallery {
+            width: 55%;
+            flex-direction: column;
+            list-style-type: none;
+
+            h2 {
+              font-size: large;
+              margin: 0;
+              background-color: #102223;
+              padding: 5px 0px 5px 25px;
+            }
+
+            div {
+              object-fit: cover;
+              background-color: #346264;
+              justify-content: space-around;
+              padding: 10px 0px 10px 0px;
+            }
+          }
+
+          .contactus {
+            width: 30%;
+            list-style-type: none;
+
+            h2 {
+              font-size: large;
+              margin: 0;
+              background-color: #102223;
+              padding: 5px 0px 5px 25px;
+            }
+
+            div {
+              background-color: #346264;
+              padding: 15px;
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: #102223;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      width: 350px;
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        justify-content: space-around;
+        a {
+          color: white;
+          font-size: small;
+          text-decoration: none;
+        }
+      }
+    }
+    p {
+      font-size: small;
     }
   }
 }
