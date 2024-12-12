@@ -9,15 +9,14 @@ body {
       url(images/bg-featured-home.webp);
     background-size: cover;
     background-position: center;
-
     div {
       display: flex;
       justify-content: flex-end;
       padding: 0px 25px 70px 0px;
 
       h1 {
-        font-size: large;
         width: 300px;
+        font-size: large;
       }
     }
     img {
@@ -140,11 +139,11 @@ body {
         ul {
           display: flex;
           justify-content: space-around;
+          flex-wrap: wrap;
           padding: 0;
 
-          .gallery {
+          li.gallery {
             width: 55%;
-            flex-direction: column;
             list-style-type: none;
 
             h2 {
@@ -155,10 +154,13 @@ body {
             }
 
             div {
-              object-fit: cover;
               background-color: #346264;
               justify-content: space-around;
               padding: 10px 0px 10px 0px;
+
+              img {
+                width: 30%;
+              }
             }
           }
 
@@ -209,4 +211,8 @@ body {
       font-size: small;
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  /* ecran smartphone en mode paysage */
 }
