@@ -4,19 +4,43 @@ body {
   color: white;
   background-color: black;
 
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
   header {
     background-image: linear-gradient(hsla(0, 0%, 0%, 0.7), rgba(0, 0, 0, 0.7)),
       url(images/bg-featured-home.webp);
     background-size: cover;
     background-position: center;
+
+    @media screen and (max-width: 425px) {
+      background-size: auto;
+      background-position: 65%;
+      padding-bottom: 65px;
+    }
+
     div {
       display: flex;
       justify-content: flex-end;
+      align-items: flex-end;
       padding: 0px 25px 70px 0px;
+
+      @media screen and (max-width: 425px) {
+        display: flex;
+        align-items: flex-end;
+        padding: 50px 0px 25px 0px;
+      }
 
       h1 {
         width: 300px;
         font-size: large;
+
+        @media screen and (max-width: 425px) {
+          width: 250px;
+          font-size: 25px;
+        }
       }
     }
     img {
@@ -24,49 +48,46 @@ body {
     }
   }
   main {
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    #main {
-      div {
-        display: flex;
-        justify-content: space-around;
+    > div {
+      display: flex;
+      justify-content: space-between;
 
-        section {
-          display: flex;
-          flex-direction: column;
-          width: 55%;
-          margin-top: 25px;
+      section {
+        margin: 25px;
+        h2 {
+          background-color: #102223;
+          padding: 5px 0px 5px 25px;
+        }
 
-          h2 {
-            background-color: #102223;
-            padding: 5px 0px 5px 25px;
+        &#lastNews {
+          width: 50%;
+
+          @media screen and (max-width: 425px) {
+            width: 100%;
+            margin: 0;
           }
 
           ul {
-            margin: 0 auto;
-            padding: 0;
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
 
             li {
-              list-style: none;
               display: flex;
               justify-content: space-evenly;
-              width: 45%;
               margin-top: 25px;
+              width: 50%;
 
               img {
                 width: 60px;
                 height: 60px;
-                margin-right: 20px;
               }
 
               div {
-                display: flex;
-                flex-direction: column;
-                padding: 5px;
-
+                padding-left: 10px;
                 h3 {
                   margin: 0;
                   color: white;
@@ -74,119 +95,105 @@ body {
                 a {
                   color: #6df2fc;
                 }
-                span {
+                p {
+                  font-size: xx-small;
                   margin: 10px 0px 0px 0px;
                   color: #74a1a3;
                 }
+              }
+            }
+          }
+        }
+        &#focusNews {
+          width: 40%;
+          @media screen and (max-width: 425px) {
+            width: 100%;
+            margin: 0;
+          }
 
+          ul {
+            li {
+              display: flex;
+              align-items: center;
+              img {
+                height: 6rem;
+              }
+              div {
+                padding: 0.5rem;
+                a {
+                  color: #6df2fc;
+                }
                 p {
+                  font-size: xx-small;
                   color: #74a1a3;
                 }
               }
             }
           }
         }
-      }
 
-      aside {
-        width: 30%;
-        margin-top: 25px;
+        &#gallery {
+          width: 50%;
+          @media screen and (max-width: 425px) {
+            width: 100%;
+            margin: 0;
+            flex-direction: row;
+          }
 
-        h2 {
-          padding: 5px 0px 5px 25px;
-          background-color: #102223;
-        }
+          h2 {
+            margin: 0;
+          }
 
-        ul {
-          display: flex;
-          flex-direction: column;
-          list-style-type: none;
-          padding: 0;
-          font-size: smaller;
+          div {
+            @media screen and (max-width: 425px) {
+              width: 100%;
+              flex-direction: row;
+            }
 
-          li {
             display: flex;
-            justify-content: space-between;
-            margin-top: 25px;
+            justify-content: space-around;
+            background-color: #74a1a3;
 
             img {
-              width: 108px;
-              height: 72px;
-              margin-right: 20px;
-            }
-
-            div {
-              flex-direction: column;
-
-              h3 {
-                margin: 0;
-                color: white;
-              }
-
-              a {
-                color: #6df2fc;
-              }
-
-              p {
-                color: #346264;
-              }
+              padding: 10px 3px 10px 3px;
+              width: 30%;
+              object-fit: cover;
             }
           }
         }
-      }
 
-      section {
-        ul {
-          display: flex;
-          justify-content: space-around;
-          flex-wrap: wrap;
-          padding: 0;
-
-          li.gallery {
-            width: 55%;
-            list-style-type: none;
-
-            h2 {
-              font-size: large;
-              margin: 0;
-              background-color: #102223;
-              padding: 5px 0px 5px 25px;
-            }
-
-            div {
-              background-color: #346264;
-              justify-content: space-around;
-              padding: 10px 0px 10px 0px;
-
-              img {
-                width: 30%;
-              }
-            }
+        &#contacts {
+          width: 40%;
+          h2 {
+            margin: 0;
           }
 
-          .contactus {
-            width: 30%;
-            list-style-type: none;
+          @media screen and (max-width: 425px) {
+            width: 100%;
+            margin: 25px 0px 25px 0px;
+            flex-direction: row;
+          }
 
-            h2 {
-              font-size: large;
-              margin: 0;
-              background-color: #102223;
-              padding: 5px 0px 5px 25px;
+          div {
+            @media screen and (max-width: 425px) {
+              flex-direction: row;
             }
+            height: 3rem;
+            background-color: #74a1a3;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
 
-            div {
-              background-color: #346264;
-              padding: 15px;
-              a {
-                color: white;
-              }
+            a {
+              text-decoration: none;
+              color: white;
             }
           }
         }
       }
     }
   }
+
   footer {
     background-color: #102223;
     display: flex;
@@ -213,6 +220,10 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
-  /* ecran smartphone en mode paysage */
+@media screen and (max-width: 425px) {
+  /* Styles pour les écrans de largeur maximale de 425px */
+  div {
+    width: 100%;
+    flex-direction: column;
+  }
 }
